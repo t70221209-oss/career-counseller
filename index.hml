@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=devicewidth, initial-scale=1.0">
+<title> Career
+Guidance - Top 3
+Careers</title>
+<style>
+body {font-family: Arial,
+sans-serif; background:
+#e0f7fa; }
+.container {max-width:
+700px; margin: 50px
+auto; background: #fff;
+padding: 25px; borderradius: 10px; boxshadow: 0 5px 15px
+rgba(0,0,0,0.2); }
+section {display: none; }
+section.active {display:
+block; }
+h2 {text-align: center;
+color: #00796b; }
+input, select, textarea {
+width: 100%; padding:
+10px; margin: 10px 0
+20px 0; border-radius:
+6px; border: 1px solid
+#ccc;}
+button { padding: 12px
+20px; margin: 5px;
+border: none; borderradius: 6px; background:
+#00796b; color: #fff;
+cursor: pointer; }
+button:hover { opacity:
+0.9;}
+#result {margin-top:
+20px; padding: 20pх;
+border-radius: 10px;
+background: #b2dfdb;
+display: none; }
+.career-card { marginbottom: 15px; padding:
+15px; border-radius: 8px;
+background: #e0f2f1;}
+.career-card h3 {
+margin: 0 0 10px 0; color:
+#004d40; }
+</style>
+</head>
+<body>
+<div class="container">
+<form id="careerForm">
+<!-- Section 1 --<
+<section
+class="active"
+<h2> Academic
+Background</h2>
+<label>Current Class</
+label>
+<select
+id="class"><option>Matric
+option><option>Intermedi
+ate</
+option><option>Other</
+option></select>
+<label>Subjects
+Studied</label>
+<input type="text"
+id="subjects"
+placeholder="e.g. Math,
+Physics, Chemistry">
+<button type="button"
+onclick="nextSection()">
+Next</button>
+</section<
+<!-- Section 2 -->
+<section>
+<h2> Subject
+Interest</h2>
+<label>Favourite
+Subject</label>
+<input type="text"
+id="favSubject"
+placeholder="Your
+favourite subject">
+<label>Subject you
+can study even when
+tired/stressed</label>
+<input type="text"
+id="stressSubject"
+placeholder="Subject you
+enjoy even when tired">
+<label>Why do you
+like this subject?</label>
+<textarea id="reason"
+rows="2"
+placeholder="Reason
+why you like it"></
+textarea>
+<label>One thing you
+dislike about this
+subject</label>
+<textarea id="dislike"
+rows="2"
+placeholder="Dislike
+about this subject"></
+textarea>
+<label>How much do
+you like it?</label>
+<select
+id="interestLevel"><optio
+n>A little</
+option><option>A lot</
+option><option>l can
+study it for hours</
+option></select>
+<button type="button"
+onclick="prevSection()">Previous</button>
+<button tyрe="button"
+onclick="nextSection()">
+Next</button>
+</section>
+<!-- Section 3 -->
+<section>
+<h2> Study Style &
+Personality</h2>
+<label>Preferred
+Study Method</label>
+<select
+id="style"><option>Readin
+g books</
+option><option>Solving
+problems</
+option><option>Practical
+work</
+option><option>Visual
+learning</option></
+select>
+<label>Which gives
+more satisfaction?</
+label>
+<select
+id="satisfaction"><option>Solving difficult
+question</
+option><option>Writing
+an exam/paper</
+option><option>Creating
+something new</
+option><option>Helping
+someone understand a
+topic</option></select>
+<label>Preferred
+Subject Type</label>
+<select
+id="subjectType"><option
+>Theory</
+option><option>Practical<
+/option><option>Mix of
+both</option></select>
+<button type="button"
+onclick="prevSection()">Previous</button>
+<button type="button"
+onclick="nextSection()">
+Next</button>
+</section>
+<!-- Section 4 -->
+<section>
+<h2> Interests &
+Daily Activities</h2>
+<label>Free time
+activities</label>
+<select
+id="freeTime"><option>C
+omputer/Mobile</
+option><option>Drawing/
+Writing/Designing</
+option><option>Teaching
+/>
+option><option>Planning/
+Managing</option></
+select>
+<label>lf you had a
+free day, what would you
+do?</label>
+<textarea
+id="freeDay" rows="2"
+placeholder="Your
+answer"></textarea>
+<button tyрe="button"
+onclick="prevSection()">P
+revious</button>
+<button type="button"
+onclick="nextSection()">
+Next</button>
+</section>
+<!-- Section 5 -->
+<section>
+<h2> SelfReflection</h2>
+<label>What are you
+naturally good at?</label>
+<select
+id="strength"><option>Lo
+gical thinking</
+option><option>Memorizi
+ng</
+option><option>Communi
+cation</
+option><option>Creativity
+</option></select>
+<label>Work that
+makes you proud</label>
+<textarea
+id="proudWork" rows="2"
+placeholder="Describe"><
+/textarea>
+<label>Do you prefer
+working alone or in a
+team?</label>
+<select
+id="teamPref"><option>Al
+one</
+option><option>Team</
+option></select>
+<button type="button"
+onclick="prevSection()">Previous</button>
+<button type="button"
+onclick="nextSection()">
+Next</button>
+</section>
+<!-- Section 6--<
+<section>
+<h2> Career
+Thinking</h2>
+<label>Thought about
+future career?</label>
+<select
+id="careerThought"><opti
+on>Yes</
+option><option>No / Not
+sure</option></select>
+<label>Career name
+(if yes)</label>
+<input type="text"
+id="careerName"
+placeholder="Optional">
+<label>Why does this
+career attract you?</
+label>
+<select
+id="careerReason"><optio
+n>Respect</
+option><option>Money</
+option><option>Interest</
+option><option>Helping
+others</option></select>
+<label>One fear about
+this career</label>
+<textarea
+id="careerFear" rows="2"
+placeholder="Pressure,
+exams, competition,
+etc."></textarea>
+<button type="button"
+onclick="prevSection()">Previous</button>
+<button type="button"
+onclick="analyze()">Submit</button>
+</section>
+</form>
+<div id="result"></div>
+</div>
+<script>
+let current = 0;
+const sections =
+document.querySelectorA
+Il('section');
+function
+}
+showSection(index){
+sections.forEach((sec,i)=
+>sec.classList.remove('ac
+tive'));
+sections[index].classList.
+add('active');
+function nextSection(){
+if(current<sections.length
+-1){current++;
+showSection(current);} }
+function prevSection(){
+if(current>0){current--;
+showSection(current);} }
+// Careers database
+const careers = |
+{name:"Engineer / Data
+Scientist", keywords:
+["math""logical""problem""
+practical"], scope:"High
+demand in Pakistan",
+salary:"PKR 80,000 –
+250,000/month"},
+{name:"Doctor / Medical
+Field", keywords:
+["bio""teaching""practical","helping"], scope:"Strong
+scope in Pakistan",
+salary:"PKR 100,000 -
+300,000/month"},
+{name:"Graphic
+Designer / UI-UX /
+Media", keywords:
+["creativity""drawing""writing""designing"],
+scope:"Growing digital &
+freelancing market"
+salary:"PKR 60,000
+200,000/month"},
+{name:"Teacher /
+-
+Lawyer / Management",
+keywords:
+["communication""teachin
+g""helping"].
+scope:"Stable &
+respected fields",
+salary:"PKR 50,000 –
+150,000/month"}
+1:
+// Analyze function:
+scores careers and
+shows top 3
+function analyze(){
+let answers = [
+document.getElementByl
+d("favSubject").value.toLo
+werCase().
+document.getElementByl
+d("strength").value.toLow
+erCase(),
+document.getElementByl
+d("style").value.toLowerC
+ase(),
+document.getElementByl
+d("freeTime").value.toLowerCase(),
+document.getElementByl
+d("interestLevel").value.toLowerCase()
+1;
+let scores =
+careers.map(c => {
+let score = 0;
+answers.forEach(ans
+=> {
+c.keywords.forEach(k
+=> { if(ans.includes(k))
+score+=2; });
+});
+});
+return {...c, score};
+scores.sort((a,b)=>b.scor
+e - a.score); //
+descending
+let top3 =
+scores.slice(0,3);
+let resultHTML =
+"<h2> Top 3 Career
+Suggestions</h2>";
+top3.forEach(c => {
+resultHTML += `<div
+class="career-card">
+<h3>${c.name}</h3>
+<p><b>Scope in
+Pakistan:</b> ${c.scope}
+</p<
+<p><b>Expected
+Salary:</b> ${c.salary}</
+p>
+});
+</div>
+document.getElementByl
+d("result").style.display="
+block";
+document.getElementByl
+d("result").innerHTML=re
+sultHTML;
+}
+</script>
+</body>
+</html>
